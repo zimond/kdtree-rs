@@ -6,7 +6,7 @@ use crate::heap_element::HeapElement;
 use crate::util;
 
 #[cfg_attr(feature = "serialize", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct KdTree<A, T, U: AsRef<[A]>> {
     // node
     left: Option<Box<KdTree<A, T, U>>>,
